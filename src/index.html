@@ -69,13 +69,15 @@
 					<img src="@img/buy/three.png" alt="Image">
 				</div>
 				<div data-watch="navigator" class="about__container">
-					<div class="about__img">
-						<img class="ibg" src="@img/about/bulb.png" alt="Image">
+					<div data-watch-threshold="0.6" data-watch data-watch-once class="about__img">
+						<img class="fall" class="ibg" src="@img/about/bulb.png" alt="Image">
 					</div>
 					<div class="about__content content-about">
-						<div class="content-about__title title-block">
-							<div class="title-block__bg-title">
+						<div data-watch-threshold="0.6" data-watch class="content-about__title title-block">
+							<div class="title-block__decor">
 								<img src="@img/about/ball.png" alt="Image">
+							</div>
+							<div class="title-block__bg-title">
 							</div>
 							<div class="title-block__img-title">
 								<img src="@img/about/title.png" alt="Image">
@@ -106,10 +108,10 @@
 					<img src="@img/buy/bg.png" alt="Image">
 				</div>
 				<div data-watch="navigator" class="buy__container">
-					<div class="buy__title">
-						<img src="@img/buy/tilte.png" alt="Image">
+					<div data-watch-threshold="0.5" data-watch data-watch-once class="buy__title">
+						<img class="fall-buy" src="@img/buy/tilte.png" alt="Image">
 					</div>
-					<ul class="buy__list">
+					<ul data-watch-threshold="0.5" data-watch data-watch-once class="buy__list">
 						<li class="buy__item item-buy">
 							<div class="item-buy__bg">
 								<img src="@img/buy/leave1.png" alt="Image">
@@ -190,8 +192,8 @@
 							</div>
 						</li>
 					</ul>
-					<div class="buy__img">
-						<img class="ibg" src="@img/buy/bulb.png" alt="Image">
+					<div data-watch-threshold="0.5" data-watch data-watch-once class="buy__img">
+						<img class="fall-buy ibg" src="@img/buy/bulb.png" alt="Image">
 					</div>
 				</div>
 
@@ -202,17 +204,19 @@
 					<img src="@img/roadmap/bg.png" alt="Image">
 				</div>
 				<div data-watch="navigator" class="roadmap__container">
-					<div class="roadmap__title title-block">
-						<div class="title-block__bg-title">
+					<div data-watch-threshold="0.6" data-watch data-watch-once class="roadmap__title title-block">
+						<div class="title-block__decor">
 							<img src="@img/roadmap/title-dec.png" alt="Image">
+						</div>
+						<div class="title-block__bg-title">
 						</div>
 						<div class="title-block__img-title">
 							<img src="@img/roadmap/title.png" alt="Image">
 						</div>
 					</div>
 
-					<ul class="roadmap__items">
-						<li class="roadmap__item item-roadmap">
+					<ul data-watch-threshold="0.2" data-watch data-watch-once class="roadmap__items">
+						<li data-watch-threshold="0.4" data-watch data-watch-once class="roadmap__item item-roadmap">
 							<div class="item-roadmap__wrp">
 								<div class="item-roadmap__bg">
 									<img src="@img/roadmap/item-bg.png" alt="Image">
@@ -262,7 +266,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="roadmap__item item-roadmap">
+						<li data-watch-threshold="0.4" data-watch data-watch-once class="roadmap__item item-roadmap">
 							<div class="item-roadmap__wrp">
 								<div class="item-roadmap__bg">
 									<img src="@img/roadmap/item-bg.png" alt="Image">
@@ -312,7 +316,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="roadmap__item item-roadmap">
+						<li data-watch-threshold="0.4" data-watch data-watch-once class="roadmap__item item-roadmap">
 							<div class="item-roadmap__wrp">
 								<div class="item-roadmap__bg">
 									<img src="@img/roadmap/item-bg.png" alt="Image">
@@ -373,14 +377,17 @@
 					<img src="@img/tokenomiks/grass.png" alt="Image">
 				</div>
 				<div data-watch="navigator" class="tokenomiks__container">
-					<div class="tokenomiks__img">
-						<img src="@img/tokenomiks/bulb.png" alt="Image">
+					<div data-watch-threshold="0.3" data-watch data-watch-once class="tokenomiks__img">
+						<img class="fall" src="@img/tokenomiks/bulb.png" alt="Image">
 						<img src="@img/tokenomiks/ball.png" alt="Image">
 					</div>
 					<div class="tokenomiks__content">
-						<div class="tokenomiks__title title-block">
-							<div class="title-block__bg-title">
+						<div data-watch-threshold="0.6" data-watch data-watch-once
+							class="tokenomiks__title title-block">
+							<div class="title-block__decor">
 								<img src="@img/tokenomiks/title-bg.png" alt="Image">
+							</div>
+							<div class="title-block__bg-title">
 							</div>
 							<div class="title-block__img-title">
 								<img src="@img/tokenomiks/title.png" alt="Image">
@@ -421,14 +428,14 @@
 				<img src="@img/what/line.png" alt="Image">
 			</div>
 			<section class="page__what what">
-
 				<div class="what__bg">
 					<img src="@img/what/bg.png" alt="Image">
 				</div>
 				<div class="what__container">
 					<div class="what__top top-what">
 						<div class="top-what__left">
-							<div class="top-what__card card-what  card-what--pakachu">
+							<div data-watch-threshold="0.5" data-watch data-watch-once
+								class="top-what__card card-what  card-what--pakachu">
 								<div class="card-what__top">
 									<div class="card-what__title">
 										<img src="@img/what/picachu.png" alt="Image">
@@ -459,7 +466,8 @@
 						<div class="middle-what__img">
 							<img class="ibg" src="@img/what/bulb.png" alt="Image">
 						</div>
-						<div class="middle-what__card card-what  card-what--bulb">
+						<div data-watch-threshold="0.5" data-watch data-watch-once
+							class="middle-what__card card-what  card-what--bulb">
 							<div class="card-what__top">
 								<div class="card-what__title">
 									<img src="@img/what/bulb-title.png" alt="Image">

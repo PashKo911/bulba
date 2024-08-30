@@ -1,3 +1,14 @@
+.fall {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-100vh) scaleY(1.2);
+}
+.fall-buy {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-100vh);
+}
+
 .menu-open-bg {
 	pointer-events: none;
 	position: fixed;
@@ -181,8 +192,18 @@
 .title-block {
 	position: relative;
 	width: 82.5%;
-	// .title-block__bg-title
 
+	&._watcher-view .title-block__img-title img {
+		animation: titlh2 0.4s ease 0.2s forwards;
+	}
+	&._watcher-view .title-block__bg-title {
+		animation: vibro 0.1s ease 0.505s forwards;
+	}
+	&._watcher-view .title-block__decor img {
+		animation: vibroScale 0.2s ease 0.6s forwards;
+	}
+
+	// .title-block__bg-title
 	&__bg-title {
 		pointer-events: none;
 		position: absolute;
@@ -195,9 +216,24 @@
 		background: linear-gradient(180deg, #42c7fb 0%, #4261fb 148.48%);
 		box-shadow: 0 toRem(4) 0 0 #000;
 		padding: toRem(10);
+		transform: translate(0, 0);
+		will-change: transform;
+		z-index: 2;
 
 		@include adaptiveValue('padding', 10, 6);
 		@include adaptiveValue('border-width', 7, 4);
+
+		@keyframes vibro {
+			0% {
+				transform: translate(0, 0);
+			}
+			95% {
+				transform: translate(0, 6%);
+			}
+			100% {
+				transform: translate(0, 0);
+			}
+		}
 
 		.roadmap & {
 			width: 109.5%;
@@ -214,6 +250,7 @@
 
 		&::after {
 			position: relative;
+			z-index: 1;
 			content: '';
 			width: 100%;
 			height: 100%;
@@ -226,13 +263,38 @@
 
 			@include adaptiveValue('border-width', 7, 4);
 		}
+	}
+
+	// .title-block__decor
+	&__decor {
+		pointer-events: none;
+		position: absolute;
+		width: 112%;
+		height: 84%;
+		bottom: -8%;
+		left: -5%;
 		img {
 			width: 28%;
 			object-fit: cover;
 			position: absolute;
 			top: -63%;
 			right: 25%;
-			z-index: -1;
+			z-index: 0;
+			transform: scale(0);
+			will-change: transform;
+
+			@keyframes vibroScale {
+				0% {
+					transform: scale(0);
+				}
+
+				90% {
+					transform: scale(1.1);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
 
 			.roadmap & {
 				width: 122%;
@@ -244,9 +306,17 @@
 			.tokenomiks__content & {
 				aspect-ratio: 578 / 330;
 				width: 82%;
-				top: -65%;
+				top: -122%;
 				right: auto;
 				left: -8%;
+			}
+
+			@keyframes scale {
+				0% {
+					transform: scale(0.5);
+				}
+				100% {
+				}
 			}
 		}
 	}
@@ -254,10 +324,35 @@
 	// .title-block__img-title
 	&__img-title {
 		img {
+			transform: translate(0, 20%) scale(0.8);
+			z-index: -1;
 			position: relative;
-			z-index: 5;
 			width: 100%;
 			object-fit: cover;
+
+			@keyframes titlh2 {
+				0% {
+					transform: translate(0, 20%) scale(0.8);
+					z-index: -1;
+				}
+				60% {
+					transform: translate(0, -65%) scale(0.95);
+					z-index: -1;
+				}
+				90% {
+					transform: translate(0, 0) scale(1);
+				}
+				95% {
+					transform: translate(0, 4%);
+					z-index: 4;
+					opacity: 1;
+				}
+				100% {
+					transform: translate(0, 0);
+					z-index: 4;
+					opacity: 1;
+				}
+			}
 		}
 	}
 }
@@ -266,6 +361,7 @@
 	position: relative;
 	z-index: 2;
 	aspect-ratio: 1920 / 98;
+	display: flex;
 
 	img {
 		position: absolute;
