@@ -297,7 +297,7 @@ h6 {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background: url(../img/buy/num-dec.webp) center/cover no-repeat;
+  background: url(../img/buy/num-dec.png) center/cover no-repeat;
   z-index: -1
 }
 .cn__button svg {
@@ -1648,7 +1648,7 @@ h2 {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background: url(../img/buy/num-dec.webp) center/cover no-repeat;
+  background: url(../img/buy/num-dec.png) center/cover no-repeat;
   z-index: -1
 }
 .item-buy__text {
@@ -1871,7 +1871,7 @@ h2 {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background: url(../img/buy/num-dec.webp) center/cover no-repeat;
+  background: url(../img/buy/num-dec.png) center/cover no-repeat;
   z-index: -1
 }
 .item-roadmap__body {
@@ -2238,11 +2238,11 @@ h2 {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background: url(../img/buy/num-dec.webp) center/cover no-repeat;
+  background: url(../img/buy/num-dec.png) center/cover no-repeat;
   z-index: -1
 }
 .card-what--bulb .card-what__ball::before {
-  background: url(../img/what/num-dec.webp) center/cover no-repeat
+  background: url(../img/what/num-dec.png) center/cover no-repeat
 }
 .middle-what {
   display: flex;
