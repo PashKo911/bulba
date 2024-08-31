@@ -8,9 +8,10 @@
 			const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
 
 			// Налаштування
-			const bgColor = '#151515'
-			const stroke = '#87f55b'
-			const fill = '#f796bf'
+			const bgColor = '#94FCAA'
+			const textColor = '#000'
+			const stroke = '#DF1818'
+			const fill = '#fff'
 			const strokeWidth = 2.6 + '%'
 
 			if (preloaderImages.length) {
@@ -53,6 +54,7 @@
 						font-size: clamp(1rem, -0.8rem + 9vw, 10rem);
 						font-family: system-ui, sans-serif;
 						font-weight: bold;
+						color: ${textColor};
 					}
 
 					.lock body{

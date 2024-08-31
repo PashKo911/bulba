@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"BULBASEOR"
 })
 
 <body>
@@ -34,12 +34,12 @@
 							<a href="#" target="_blank" class="social-block__link social-link">
 								<span>
 									<svg viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<mask id="mask0_26_1156" style="mask-type:luminance" maskUnits="userSpaceOnUse"
+										<mask id="mask0_26_1157" style="mask-type:luminance" maskUnits="userSpaceOnUse"
 											x="0" y="0" width="49" height="49">
 											<path d="M0.651855 0.79744H48.6519V48.7974H0.651855V0.79744Z"
 												fill="white" />
 										</mask>
-										<g mask="url(#mask0_26_1156)">
+										<g mask="url(#mask0_26_1157)">
 											<path
 												d="M38.4515 3.04572H45.8127L29.7327 21.4709L48.6516 46.5474H33.8401L22.231 31.3417L8.96241 46.5474H1.59441L18.7921 26.8331L0.65155 3.04914H15.8401L26.3178 16.9451L38.4515 3.04572ZM35.863 42.1314H39.943L13.6116 7.232H9.23669L35.863 42.1314Z"
 												fill="#FDF9D4" />
@@ -70,10 +70,12 @@
 				</div>
 				<div data-watch="navigator" class="about__container">
 					<div data-watch-threshold="0.6" data-watch data-watch-once class="about__img">
-						<img class="fall" class="ibg" src="@img/about/bulb.png" alt="Image">
+						<img class="fall " src="@img/about/bulb.png" alt="Image">
 					</div>
 					<div class="about__content content-about">
-						<div data-watch-threshold="0.6" data-watch class="content-about__title title-block">
+						<div data-watch-threshold="0.6" data-watch data-watch-once
+							class="content-about__title title-block">
+							<h2>About</h2>
 							<div class="title-block__decor">
 								<img src="@img/about/ball.png" alt="Image">
 							</div>
@@ -109,10 +111,11 @@
 				</div>
 				<div data-watch="navigator" class="buy__container">
 					<div data-watch-threshold="0.5" data-watch data-watch-once class="buy__title">
+						<h2>How to buy</h2>
 						<img class="fall-buy" src="@img/buy/tilte.png" alt="Image">
 					</div>
 					<ul data-watch-threshold="0.5" data-watch data-watch-once class="buy__list">
-						<li class="buy__item item-buy">
+						<li data-watch-threshold="0.6" data-watch data-watch-once class="buy__item item-buy">
 							<div class="item-buy__bg">
 								<img src="@img/buy/leave1.png" alt="Image">
 								<img src="@img/buy/leave2.png" alt="Image">
@@ -133,7 +136,7 @@
 								</p>
 							</div>
 						</li>
-						<li class="buy__item item-buy">
+						<li data-watch-threshold="0.6" data-watch data-watch-once class="buy__item item-buy">
 							<div class="item-buy__bg">
 								<img src="@img/buy/ball1.png" alt="Image">
 							</div>
@@ -152,7 +155,7 @@
 								</p>
 							</div>
 						</li>
-						<li class="buy__item item-buy">
+						<li data-watch-threshold="0.6" data-watch data-watch-once class="buy__item item-buy">
 							<div class="item-buy__bg">
 								<img src="@img/buy/leave3.png" alt="Image">
 								<img src="@img/buy/ball2.png" alt="Image">
@@ -172,7 +175,7 @@
 								</p>
 							</div>
 						</li>
-						<li class="buy__item item-buy">
+						<li data-watch-threshold="0.6" data-watch data-watch-once class="buy__item item-buy">
 							<div class="item-buy__bg">
 								<img src="@img/buy/leave4.png" alt="Image">
 							</div>
@@ -205,6 +208,7 @@
 				</div>
 				<div data-watch="navigator" class="roadmap__container">
 					<div data-watch-threshold="0.6" data-watch data-watch-once class="roadmap__title title-block">
+						<h2>Roadmap</h2>
 						<div class="title-block__decor">
 							<img src="@img/roadmap/title-dec.png" alt="Image">
 						</div>
@@ -239,29 +243,29 @@
 										</div>
 									</div>
 									<div class="item-roadmap__body">
-										<ul class="item-roadmap__list">
+										<div class="item-roadmap__list">
 											<div class="item-roadmap__bg-body">
 												<img src="@img/roadmap/list-decor1.png" alt="Image">
 											</div>
-											<li class="item-roadmap__item">
+											<div class="item-roadmap__item">
 												Website Launch
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Social Media Channel
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Creation
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Smart Contract
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Audit
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Listing
-											</li>
-										</ul>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -289,29 +293,29 @@
 										</div>
 									</div>
 									<div class="item-roadmap__body">
-										<ul class="item-roadmap__list">
+										<div class="item-roadmap__list">
 											<div class="item-roadmap__bg-body">
 												<img src="@img/roadmap/list-decor2.png" alt="Image">
 											</div>
-											<li class="item-roadmap__item">
+											<div class="item-roadmap__item">
 												Website Launch
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Social Media Channel
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Creation
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Smart Contract
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Audit
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Listing
-											</li>
-										</ul>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -339,30 +343,29 @@
 										</div>
 									</div>
 									<div class="item-roadmap__body">
-
-										<ul class="item-roadmap__list">
+										<div class="item-roadmap__list">
 											<div class="item-roadmap__bg-body">
 												<img src="@img/roadmap/list-decor3.png" alt="Image">
 											</div>
-											<li class="item-roadmap__item">
+											<div class="item-roadmap__item">
 												Website Launch
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Social Media Channel
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Creation
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Smart Contract
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Audit
-											</li>
-											<li class="item-roadmap__item">
+											</div>
+											<div class="item-roadmap__item">
 												Listing
-											</li>
-										</ul>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -384,6 +387,7 @@
 					<div class="tokenomiks__content">
 						<div data-watch-threshold="0.6" data-watch data-watch-once
 							class="tokenomiks__title title-block">
+							<h2>Tokenomiks</h2>
 							<div class="title-block__decor">
 								<img src="@img/tokenomiks/title-bg.png" alt="Image">
 							</div>
@@ -425,7 +429,21 @@
 				</div>
 			</section>
 			<div class="line line--top">
-				<img src="@img/what/line.png" alt="Image">
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
 			</div>
 			<section class="page__what what">
 				<div class="what__bg">
@@ -494,6 +512,7 @@
 								<div class="bottom-what__wrp-text">
 									<div class="bottom-what__title">
 										<img src="@img/what/what-text.png" alt="Image">
+										<h2>What will bulbaseor do</h2>
 									</div>
 								</div>
 							</div>
@@ -560,11 +579,26 @@
 
 			</section>
 			<div class="line line--bottom">
-				<img src="@img/what/line.png" alt="Image">
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
+				<div class="line__wrp">
+					<img src="@img/what/line.png" alt="Image">
+				</div>
 			</div>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
+	@@include('html/_preloader.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

@@ -19,110 +19,6 @@
 	}
 }
 
-@keyframes fall-hero-img {
-	0% {
-		transform: translateY(-100vh) scaleY(1.2) scaleX(1) translateX(-50%);
-	}
-	85% {
-		transform: translateY(5vh) scaleY(0.8) translateX(-50%);
-	}
-	100% {
-		transform: translateY(0) scaleY(1) translateX(-50%);
-	}
-}
-@keyframes fall {
-	0% {
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(-100vh) scaleY(1.2) scaleX(1);
-	}
-	85% {
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(5vh) scaleY(0.8);
-	}
-	100% {
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0) scaleY(1);
-	}
-}
-
-@keyframes from-right {
-	0% {
-		opacity: 0;
-		visibility: hidden;
-		transform: translateX(100%);
-	}
-	20% {
-		opacity: 1;
-		visibility: visible;
-	}
-	80% {
-		opacity: 1;
-		visibility: visible;
-		transform: translateX(-10%) scaleX(0.85);
-	}
-
-	100% {
-		opacity: 1;
-		visibility: visible;
-		transform: translateX(0) scaleX(1);
-	}
-}
-
-@keyframes from-left {
-	0% {
-		opacity: 0;
-		visibility: hidden;
-		transform: translateX(-100%);
-	}
-	20% {
-		opacity: 1;
-		visibility: visible;
-	}
-
-	80% {
-		opacity: 1;
-		visibility: visible;
-		transform: translateX(50%);
-	}
-	90% {
-		opacity: 1;
-		visibility: visible;
-		transform: translateX(0);
-	}
-}
-
-// @keyframes what-img1 {
-// 	0% {
-// 		transform: translate(-20%, 0);
-// 	}
-// 	50% {
-// 		transform: translate(10%, 10%);
-// 	}
-// 	100% {
-// 		transform: translate(20%, 0%);
-// 	}
-// }
-// @keyframes what-img2 {
-// 	0% {
-// 		transform: translate(-10%, 0);
-// 	}
-// 	100% {
-// 		transform: translate(10%, 0%);
-// 	}
-// }
-
-// @keyframes light {
-// 	0% {
-// 		transform: skewY(-10deg);
-// 	}
-// 	100% {
-// 		transform: skewY(10deg);
-// 	}
-// }
-
 .hero {
 	position: relative;
 	padding-bottom: toRem(50);
@@ -251,7 +147,7 @@
 		z-index: 4;
 
 		@include adaptiveValue('margin-top', -260, -160, 2, $containerWidth, 991.98);
-		@include adaptiveValue('margin-top', -150, 0, 3, 991.98, 320);
+		@include adaptiveValue('margin-top', -150, -30, 3, 991.98, 320);
 
 		@media ((min-width: $mobileSmall) and (max-width: $tablet)) {
 			order: 1;
@@ -287,30 +183,6 @@
 		.loaded & {
 			animation: from-left 0.3s ease 0.5s forwards;
 		}
-
-		@keyframes from-left {
-			0% {
-				opacity: 0;
-				visibility: hidden;
-				transform: translateX(-100%);
-			}
-			20% {
-				opacity: 1;
-				visibility: visible;
-			}
-			80% {
-				opacity: 1;
-				visibility: visible;
-				transform: translateX(10%) scaleX(0.85);
-			}
-
-			100% {
-				opacity: 1;
-				visibility: visible;
-				transform: translateX(0) scaleX(1);
-			}
-		}
-
 		@media (max-width: $tablet) {
 			order: 3;
 		}
@@ -600,24 +472,6 @@
 			animation: fall-buy 0.35s ease 0.1s forwards;
 		}
 
-		@keyframes fall-buy {
-			0% {
-				opacity: 0;
-				visibility: hidden;
-				transform: translateY(-100vh);
-			}
-			85% {
-				opacity: 1;
-				visibility: visible;
-				transform: translateY(-1vh);
-			}
-			100% {
-				opacity: 1;
-				visibility: visible;
-				transform: translateY(-2vh);
-			}
-		}
-
 		@media (max-width: $tablet) {
 			margin-bottom: toRem(60);
 			width: 110%;
@@ -687,19 +541,6 @@
 		}
 
 		@include animationDelay(4, 0.2, 0.4);
-	}
-
-	@keyframes opacity {
-		0% {
-			opacity: 0;
-			visibility: hidden;
-			transform: translate(0, -20%);
-		}
-		100% {
-			opacity: 1;
-			visibility: visible;
-			transform: translate(0, 0);
-		}
 	}
 
 	@media ((min-width: toEm(320)) and (max-width: $mobileSmall)) {
@@ -841,6 +682,12 @@
 		height: 100%;
 		top: 0%;
 		left: 0%;
+		z-index: -1;
+		transform: scale(0);
+
+		.item-buy._watcher-view & {
+			animation: vibroScale 0.2s ease 0.3s forwards;
+		}
 	}
 	// .item-buy__header
 	&__header {
@@ -1129,23 +976,6 @@
 				}
 			}
 		}
-		@keyframes fall-roadmap {
-			0% {
-				opacity: 0;
-				visibility: hidden;
-				transform: translateY(-20%) scaleY(1.2);
-			}
-			95% {
-				opacity: 1;
-				visibility: visible;
-				transform: translateY(5%) scaleY(0.9);
-			}
-			100% {
-				opacity: 1;
-				visibility: visible;
-				transform: translateY(0) scaleY(1);
-			}
-		}
 	}
 
 	// .item-roadmap__dec-img
@@ -1378,22 +1208,12 @@
 	}
 	// .tokenomiks__img
 	&__img {
-		@keyframes wheel {
-			0% {
-				transform: translateX(-100vw) rotate(-1080deg);
-			}
-
-			100% {
-				transform: translateX(0) rotate(0);
-			}
-		}
-
 		&._watcher-view img {
 			&:nth-child(1) {
-				animation: fall 0.2s ease 1s forwards;
+				animation: fall 0.2s ease 1.2s forwards;
 			}
 			&:nth-child(2) {
-				animation: wheel 0.8s ease-in-out 0.2s forwards;
+				animation: wheel 0.8s ease-in-out 0.4s forwards;
 			}
 		}
 		@media ((min-width: toEm(320)) and (max-width: $mobileSmall)) {

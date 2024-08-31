@@ -4,7 +4,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="description" content="Bulbaseor">
 	<style>
-		body {
+		/* body {
 			opacity: 0;
 			visibility: hidden;
 			transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
@@ -13,21 +13,20 @@
 		.loaded body {
 			opacity: 1;
 			visibility: visible;
-		}
+		} */
 
 		/* При використанні прелоадера використати ці стилі */
-		/* 
-		.loading body>*:not(#fls-preloader) {
-				opacity: 0;
-				visibility: hidden;
-			}
 
-			.loaded body>*:not(#fls-preloader) {
-				transition: opacity 0.3s ease 0.1s, visibility 0.3s ease 0.1s;
-				opacity: 1;
-				visibility: visible;
-			}
-	*/
+		.loading body>*:not(#fls-preloader) {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loaded body>*:not(#fls-preloader) {
+			transition: opacity 0.3s ease 0.1s, visibility 0.3s ease 0.1s;
+			opacity: 1;
+			visibility: visible;
+		}
 	</style>
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
