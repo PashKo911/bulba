@@ -274,7 +274,7 @@ export function spollers() {
 							? (spollerBlock.open = true)
 							: setTimeout(() => {
 									spollerBlock.open = false
-							  }, spollerSpeed)
+								}, spollerSpeed)
 
 						spollerTitle.classList.toggle('_spoller-active')
 						_slideToggle(spollerTitle.nextElementSibling, spollerSpeed)
@@ -455,7 +455,7 @@ export function tabs() {
 				tabActiveTitle.length
 					? (tabActiveTitle = Array.from(tabActiveTitle).filter(
 							(item) => item.closest('[data-tabs]') === tabsBlock
-					  ))
+						))
 					: null
 				tabActiveTitle.length ? tabActiveTitle[0].classList.remove('_tab-active') : null
 				tabTitle.classList.add('_tab-active')
@@ -739,12 +739,12 @@ export function customCursor(isShadowTrue) {
 			cursorPointer
 				? (cursorPointer.style.transform = `translate3d(${e.clientX - cursorPointerStyle.width / 2}px, ${
 						e.clientY - cursorPointerStyle.height / 2
-				  }px, 0)`)
+					}px, 0)`)
 				: null
 			cursorShadow
 				? (cursorShadow.style.transform = `translate3d(${e.clientX - cursorShadowStyle.width / 2}px, ${
 						e.clientY - cursorShadowStyle.height / 2
-				  }px, 0)`)
+					}px, 0)`)
 				: null
 		}
 

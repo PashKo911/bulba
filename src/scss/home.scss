@@ -388,22 +388,29 @@
 		background: linear-gradient(180deg, #ffe065 17.72%, #ff9735 138.6%);
 		box-shadow: 0 toRem(4) 0 0 #000;
 		padding: toRem(6);
+	}
+	// .content-about__text-body
+	&__text-body {
+		padding: toRem(24);
+		border-radius: toRem(16);
+		border: toRem(4) solid #000;
+		background: linear-gradient(180deg, #fff 0%, #fffcab 210.32%), #fdfaf2;
+		box-shadow: toRem(2) toRem(-124) 0 0 rgba(253, 160, 48, 0.11) inset;
+
+		@include adaptiveValue('padding', 24, 15, 2, $containerWidth, 991.98);
+		@include adaptiveValue('padding', 24, 15, 3, 991.98, 320);
 
 		p {
 			color: #000;
 			font-style: normal;
 			font-weight: 700;
-			padding: toRem(24);
-			border-radius: toRem(16);
-			border: toRem(4) solid #000;
-			background: linear-gradient(180deg, #fff 0%, #fffcab 210.32%), #fdfaf2;
-			box-shadow: toRem(2) toRem(-124) 0 0 rgba(253, 160, 48, 0.11) inset;
 			line-height: toEm(31.2, 24);
-			@include adaptiveValue('padding', 24, 15, 2, $containerWidth, 991.98);
-			@include adaptiveValue('padding', 24, 15, 3, 991.98, 320);
-
 			@include adaptiveValue('font-size', 24, 18, 2, $containerWidth, 991.98);
-			@include adaptiveValue('font-size', 24, 18, 3, 991.98, 320);
+			@include adaptiveValue('font-size', 24, 16, 3, 991.98, 320);
+
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
 		}
 	}
 	// .content-about__button
@@ -501,8 +508,8 @@
 	&__img {
 		aspect-ratio: 924 / 1289;
 		pointer-events: none;
-		@include adaptiveValue('margin-top', -990, -650, 2, $containerWidth, 991.98);
-		@include adaptiveValue('margin-top', -270, -75, 3, 991.98, 320);
+		@include adaptiveValue('margin-top', -950, -630, 2, $containerWidth, 991.98);
+		@include adaptiveValue('margin-top', -230, -75, 3, 991.98, 320);
 
 		@media (max-width: $tablet) {
 			width: 50%;
@@ -700,8 +707,8 @@
 		background: linear-gradient(180deg, #ffe065 17.72%, #ff9735 138.6%);
 		box-shadow: 0 toRem(4) 0 0 #000;
 		padding: toRem(6);
-		@include adaptiveValue('font-size', 32, 18, 2, 1920, 991.98);
-		@include adaptiveValue('font-size', 32, 22, 3, 991.98, 320);
+		@include adaptiveValue('font-size', 28, 14, 2, 1920, 991.98);
+		@include adaptiveValue('font-size', 32, 18, 3, 991.98, 320);
 		&:not(:last-child) {
 			margin-bottom: toRem(8);
 		}
@@ -711,13 +718,22 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(12);
+
 		border-radius: 1000px;
 		border: toRem(4) solid #000;
 		background: linear-gradient(180deg, #fff 0%, #fffcab 140.1%);
 		box-shadow: 0 0 toRem(4) 0 rgba(0, 0, 0, 0.25) inset;
+
+		h3 {
+			padding-right: toRem(15);
+			padding-top: toRem(5);
+			padding-bottom: toRem(5);
+			line-height: 1;
+		}
 	}
 	// .item-buy__numb
 	&__numb {
+		flex-shrink: 0;
 		font-size: toRem(26);
 		position: relative;
 		width: toEm(61, 26);
@@ -765,6 +781,18 @@
 			@include adaptiveValue('padding', 24, 15, 3, 991.98, 320);
 			@include adaptiveValue('font-size', 24, 14, 2, 1920, 991.98);
 			@include adaptiveValue('font-size', 24, 16, 3, 991.98, 320);
+
+			a {
+				text-decoration: underline;
+				transition: color 0.2s;
+				will-change: color;
+
+				@media (any-hover: hover) {
+					&:hover {
+						color: #df1818;
+					}
+				}
+			}
 		}
 	}
 }
@@ -854,9 +882,12 @@
 	border: toRem(5) solid #000;
 	background: linear-gradient(170deg, #8dc4ff 7.41%, #429bfb 128.05%);
 	padding: toRem(7);
+	display: flex;
+	flex-direction: column;
 
 	&:nth-child(1) {
 		.item-roadmap__img {
+			aspect-ratio: 490 / 491;
 			& > img {
 				position: relative;
 				top: -1%;
@@ -865,17 +896,18 @@
 		}
 
 		.item-roadmap__bg-body {
-			width: 132%;
-			left: -29%;
+			width: 110%;
+			left: -6%;
 		}
 	}
 	&:nth-child(2) {
 		.item-roadmap__img {
+			aspect-ratio: 469 / 469;
 			& > img {
 				margin-top: toRem(-114);
 				position: relative;
 				left: -4%;
-				top: -2%;
+				top: -0.5%;
 				animation-delay: 0.4s;
 				@include adaptiveValue('margin-top', -114, -60, 2, $containerWidth, 991.98);
 				@include adaptiveValue('margin-top', -130, -100, 1, 991.98, 767.98);
@@ -883,12 +915,13 @@
 			}
 		}
 		.item-roadmap__bg-body {
-			width: 148%;
-			left: -47%;
+			width: 124%;
+			left: -15%;
 		}
 	}
 	&:nth-child(3) {
 		.item-roadmap__img {
+			aspect-ratio: 494 / 494;
 			& > img {
 				position: relative;
 				left: -2%;
@@ -897,8 +930,8 @@
 			}
 		}
 		.item-roadmap__bg-body {
-			width: 111%;
-			left: -10%;
+			width: 97%;
+			left: 3%;
 		}
 	}
 
@@ -919,6 +952,8 @@
 		border-radius: toRem(22);
 		border: toRem(5) solid #000;
 		background: linear-gradient(1deg, #2c6d68 1.18%, #66dbaf 103.86%);
+		display: flex;
+		flex-direction: column;
 	}
 	// .item-roadmap__bg
 	&__bg {
@@ -952,7 +987,7 @@
 		& > img {
 			margin-top: toRem(-108);
 			width: 100%;
-			height: 100%;
+			// height: 100%;
 			position: absolute;
 			object-fit: cover;
 			opacity: 0;
@@ -1006,6 +1041,12 @@
 		z-index: 2;
 		padding: 0 toRem(12) toRem(12) toRem(12);
 		margin-top: toRem(-14);
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+
+		@include adaptiveValue('margin-top', -100, -60, 2, $containerWidth, 991.98);
+		@include adaptiveValue('margin-top', -140, -60, 3, 991.98, 320);
 	}
 
 	// .item-roadmap__header
@@ -1078,6 +1119,7 @@
 		background: #fedd57;
 		padding: toRem(7);
 		margin-top: toRem(-36);
+		flex-grow: 1;
 	}
 
 	// .item-roadmap__bg-body
@@ -1110,6 +1152,7 @@
 		box-shadow: 0 toRem(-150) 0 0 rgba(0, 0, 0, 0.1) inset;
 		padding: toRem(34) toRem(24) toRem(21) toRem(24);
 		overflow: hidden;
+		min-height: 100%;
 
 		@include adaptiveValue('padding-left', 24, 14, 2, $containerWidth, 991.98);
 		@include adaptiveValue('padding-left', 24, 14, 3, 991.98, 320);
@@ -1372,7 +1415,7 @@
 		// .card-tokenomiks__item--supply
 		&--supply {
 			&::before {
-				content: 'Tonen Supply';
+				content: 'Token Supply';
 			}
 		}
 	}
@@ -1513,8 +1556,8 @@
 		margin-top: 3%;
 
 		.card-what--pakachu & {
-			@include adaptiveValue('width', 283, 220, 2, $containerWidth, 991.98);
-			@include adaptiveValue('width', 283, 160, 3, 991.98, 320);
+			@include adaptiveValue('width', 382, 311, 2, $containerWidth, 991.98);
+			@include adaptiveValue('width', 371, 160, 3, 991.98, 320);
 		}
 		.card-what--bulb & {
 			@include adaptiveValue('width', 371, 311, 2, $containerWidth, 991.98);

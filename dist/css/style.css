@@ -297,7 +297,7 @@ h6 {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background: url(../img/buy/num-dec.png) center/cover no-repeat;
+  background: url(../img/buy/num-dec.webp) center/cover no-repeat;
   z-index: -1
 }
 .cn__button svg {
@@ -1450,16 +1450,21 @@ h2 {
   box-shadow: 0 .25rem 0 0 #000;
   padding: .375rem
 }
-.content-about__text p {
-  color: #000;
-  font-style: normal;
-  font-weight: 700;
+.content-about__text-body {
   padding: 1.5rem;
   border-radius: 1rem;
   border: .25rem solid #000;
   background: linear-gradient(180deg,#fff 0,#fffcab 210.32%),#fdfaf2;
-  box-shadow: .125rem -7.75rem 0 0 rgba(253,160,48,.11) inset;
+  box-shadow: .125rem -7.75rem 0 0 rgba(253,160,48,.11) inset
+}
+.content-about__text-body p {
+  color: #000;
+  font-style: normal;
+  font-weight: 700;
   line-height: 1.3em
+}
+.content-about__text-body p:not(:last-child) {
+  margin-bottom: .9375rem
 }
 .content-about__button {
   align-self: flex-end;
@@ -1628,7 +1633,14 @@ h2 {
   background: linear-gradient(180deg,#fff 0,#fffcab 140.1%);
   box-shadow: 0 0 .25rem 0 rgba(0,0,0,.25) inset
 }
+.item-buy__wrp h3 {
+  padding-right: .9375rem;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  line-height: 1
+}
 .item-buy__numb {
+  flex-shrink: 0;
   font-size: 1.625rem;
   position: relative;
   width: 2.3461538462em;
@@ -1648,7 +1660,7 @@ h2 {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background: url(../img/buy/num-dec.png) center/cover no-repeat;
+  background: url(../img/buy/num-dec.webp) center/cover no-repeat;
   z-index: -1
 }
 .item-buy__text {
@@ -1669,6 +1681,11 @@ h2 {
   border: .25rem solid #000;
   background: linear-gradient(180deg,#fff 0,#fffcab 210.32%),#fdfaf2;
   box-shadow: .125rem -7.75rem 0 0 rgba(253,160,48,.11) inset
+}
+.item-buy__text p a {
+  text-decoration: underline;
+  transition: color .2s;
+  will-change: color
 }
 .roadmap {
   position: relative;
@@ -1715,7 +1732,12 @@ h2 {
   border-radius: 1.75rem;
   border: .3125rem solid #000;
   background: linear-gradient(170deg,#8dc4ff 7.41%,#429bfb 128.05%);
-  padding: .4375rem
+  padding: .4375rem;
+  display: flex;
+  flex-direction: column
+}
+.item-roadmap:nth-child(1) .item-roadmap__img {
+  aspect-ratio: 490/491
 }
 .item-roadmap:nth-child(1) .item-roadmap__img>img {
   position: relative;
@@ -1724,20 +1746,26 @@ h2 {
   animation-delay: .2s
 }
 .item-roadmap:nth-child(1) .item-roadmap__bg-body {
-  width: 132%;
-  left: -29%
+  width: 110%;
+  left: -6%
+}
+.item-roadmap:nth-child(2) .item-roadmap__img {
+  aspect-ratio: 469/469
 }
 .item-roadmap:nth-child(2) .item-roadmap__img>img {
   margin-top: -7.125rem;
   position: relative;
   left: -4%;
-  top: -2%;
+  top: -.5%;
   -webkit-animation-delay: .4s;
   animation-delay: .4s
 }
 .item-roadmap:nth-child(2) .item-roadmap__bg-body {
-  width: 148%;
-  left: -47%
+  width: 124%;
+  left: -15%
+}
+.item-roadmap:nth-child(3) .item-roadmap__img {
+  aspect-ratio: 494/494
 }
 .item-roadmap:nth-child(3) .item-roadmap__img>img {
   position: relative;
@@ -1747,15 +1775,17 @@ h2 {
   animation-delay: .6s
 }
 .item-roadmap:nth-child(3) .item-roadmap__bg-body {
-  width: 111%;
-  left: -10%
+  width: 97%;
+  left: 3%
 }
 .item-roadmap__wrp {
   position: relative;
   height: 100%;
   border-radius: 1.375rem;
   border: .3125rem solid #000;
-  background: linear-gradient(1deg,#2c6d68 1.18%,#66dbaf 103.86%)
+  background: linear-gradient(1deg,#2c6d68 1.18%,#66dbaf 103.86%);
+  display: flex;
+  flex-direction: column
 }
 .item-roadmap__bg {
   position: absolute;
@@ -1786,7 +1816,6 @@ h2 {
 .item-roadmap__img>img {
   margin-top: -6.75rem;
   width: 100%;
-  height: 100%;
   position: absolute;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1819,7 +1848,10 @@ h2 {
   position: relative;
   z-index: 2;
   padding: 0 .75rem .75rem .75rem;
-  margin-top: -.875rem
+  margin-top: -.875rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column
 }
 .item-roadmap__header {
   position: relative;
@@ -1871,7 +1903,7 @@ h2 {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background: url(../img/buy/num-dec.png) center/cover no-repeat;
+  background: url(../img/buy/num-dec.webp) center/cover no-repeat;
   z-index: -1
 }
 .item-roadmap__body {
@@ -1880,7 +1912,8 @@ h2 {
   border: .3125rem solid #000;
   background: #fedd57;
   padding: .4375rem;
-  margin-top: -2.25rem
+  margin-top: -2.25rem;
+  flex-grow: 1
 }
 .item-roadmap__bg-body {
   pointer-events: none;
@@ -1908,7 +1941,8 @@ h2 {
   background: #fdfaf2;
   box-shadow: 0 -9.375rem 0 0 rgba(0,0,0,.1) inset;
   padding: 2.125rem 1.5rem 1.3125rem 1.5rem;
-  overflow: hidden
+  overflow: hidden;
+  min-height: 100%
 }
 .item-roadmap__item {
   position: relative;
@@ -2063,7 +2097,7 @@ h2 {
   content: "Tax"
 }
 .card-tokenomiks__item--supply::before {
-  content: "Tonen Supply"
+  content: "Token Supply"
 }
 .card-tokenomiks__cn {
   border-radius: 62.5rem;
@@ -2238,11 +2272,11 @@ h2 {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background: url(../img/buy/num-dec.png) center/cover no-repeat;
+  background: url(../img/buy/num-dec.webp) center/cover no-repeat;
   z-index: -1
 }
 .card-what--bulb .card-what__ball::before {
-  background: url(../img/what/num-dec.png) center/cover no-repeat
+  background: url(../img/what/num-dec.webp) center/cover no-repeat
 }
 .middle-what {
   display: flex;
@@ -2560,10 +2594,10 @@ h2 {
   .content-about__bg-title::after {
     border-width: .4375rem
   }
-  .content-about__text p {
+  .content-about__text-body {
     padding: 1.5rem
   }
-  .content-about__text p {
+  .content-about__text-body p {
     font-size: 1.5rem
   }
   .content-about__button {
@@ -2582,7 +2616,7 @@ h2 {
     margin-bottom: 1.875rem
   }
   .buy__img {
-    margin-top: -61.875rem
+    margin-top: -59.375rem
   }
   .roadmap__title {
     margin-bottom: 9.0625rem
@@ -2597,6 +2631,9 @@ h2 {
   }
   .item-roadmap__img>img {
     margin-top: -6.75rem
+  }
+  .item-roadmap__content {
+    margin-top: -6.25rem
   }
   .item-roadmap__wrp-numb {
     min-width: 13.125rem
@@ -2641,7 +2678,7 @@ h2 {
     padding-right: 1.25rem
   }
   .card-what--pakachu .card-what__title {
-    width: 17.6875rem
+    width: 23.875rem
   }
   .card-what--bulb .card-what__title {
     width: 23.1875rem
@@ -2696,7 +2733,7 @@ h2 {
     column-gap: 1.4375rem
   }
   .item-buy__header {
-    font-size: 2rem
+    font-size: 1.75rem
   }
   .item-buy__numb {
     font-size: 1.625rem
@@ -2830,11 +2867,11 @@ h2 {
   .content-about__bg-title::after {
     border-width: .25rem
   }
-  .content-about__text p {
+  .content-about__text-body {
     padding: .9375rem
   }
-  .content-about__text p {
-    font-size: 1.125rem
+  .content-about__text-body p {
+    font-size: 1rem
   }
   .content-about__button {
     border-width: .25rem
@@ -2855,7 +2892,7 @@ h2 {
     margin-top: -4.6875rem
   }
   .item-buy__header {
-    font-size: 1.375rem
+    font-size: 1.125rem
   }
   .item-buy__numb {
     font-size: 1.125rem
@@ -2876,6 +2913,9 @@ h2 {
     margin-top: -3.75rem
   }
   .item-roadmap__img>img {
+    margin-top: -3.75rem
+  }
+  .item-roadmap__content {
     margin-top: -3.75rem
   }
   .item-roadmap__header {
@@ -3272,17 +3312,17 @@ h2 {
   .about {
     padding-top: clamp(9.375rem ,.8302578788rem + 13.7821199963vw ,15rem)
   }
-  .content-about__text p {
+  .content-about__text-body {
     padding: clamp(.9375rem ,.0830257879rem + 1.3782119996vw ,1.5rem)
   }
-  .content-about__text p {
+  .content-about__text-body p {
     font-size: clamp(1.125rem ,.5553505253rem + .9188079998vw ,1.5rem)
   }
   .buy__title {
     margin-bottom: clamp(1.875rem ,9.7470789562rem + -7.6567333313vw ,5rem)
   }
   .buy__img {
-    margin-top: clamp(-61.875rem ,-8.3448630976rem + -52.0657866528vw ,-40.625rem)
+    margin-top: clamp(-59.375rem ,-8.9936946801rem + -49.0030933203vw ,-39.375rem)
   }
   .roadmap__items {
     -webkit-column-gap: clamp(.9375rem ,-2.1955721111rem + 5.0534439987vw ,3rem);
@@ -3294,6 +3334,9 @@ h2 {
   }
   .item-roadmap__img>img {
     margin-top: clamp(-6.75rem ,.807195798rem + -7.350463998vw ,-3.75rem)
+  }
+  .item-roadmap__content {
+    margin-top: clamp(-6.25rem ,.047663165rem + -6.125386665vw ,-3.75rem)
   }
   .item-roadmap__wrp-numb {
     min-width: clamp(11.25rem ,8.4017526263rem + 4.5940399988vw ,13.125rem)
@@ -3308,7 +3351,7 @@ h2 {
     font-size: clamp(1.125rem ,.5553505253rem + .9188079998vw ,1.5rem)
   }
   .card-what--pakachu .card-what__title {
-    width: clamp(13.75rem ,7.7686805151rem + 9.6474839974vw ,17.6875rem)
+    width: clamp(19.4375rem ,12.6966478821rem + 10.8725613304vw ,23.875rem)
   }
   .card-what--bulb .card-what__title {
     width: clamp(19.4375rem ,13.7410052525rem + 9.1880799975vw ,23.1875rem)
@@ -3348,20 +3391,20 @@ h2 {
   .about {
     padding-top: clamp(4.375rem ,1.9939767553rem + 11.9051162237vw ,9.375rem)
   }
-  .content-about__text p {
+  .content-about__text-body {
     padding: clamp(.9375rem ,.669634885rem + 1.3393255752vw ,1.5rem)
   }
-  .content-about__text p {
-    font-size: clamp(1.125rem ,.9464232566rem + .8928837168vw ,1.5rem)
+  .content-about__text-body p {
+    font-size: clamp(1rem ,.7618976755rem + 1.1905116224vw ,1.5rem)
   }
   .buy__title {
     margin-top: clamp(-4.375rem ,-3.4523720944rem + -1.488139528vw ,-3.75rem)
   }
   .buy__img {
-    margin-top: clamp(-16.875rem ,1.1162441591rem + -29.0187207953vw ,-4.6875rem)
+    margin-top: clamp(-14.375rem ,-.0742674633rem + -23.0661626834vw ,-4.6875rem)
   }
   .item-buy__header {
-    font-size: clamp(1.375rem ,1.0773720944rem + 1.488139528vw ,2rem)
+    font-size: clamp(1.125rem ,.7083209322rem + 2.0833953391vw ,2rem)
   }
   .item-buy__numb {
     font-size: clamp(1.125rem ,.8868976755rem + 1.1905116224vw ,1.625rem)
@@ -3374,6 +3417,9 @@ h2 {
   }
   .roadmap__items {
     row-gap: clamp(3.75rem ,2.5594883776rem + 5.9525581118vw ,6.25rem)
+  }
+  .item-roadmap__content {
+    margin-top: clamp(-8.75rem ,-1.3689767553rem + -11.9051162237vw ,-3.75rem)
   }
   .item-roadmap__header {
     font-size: clamp(1.375rem ,.9583209322rem + 2.0833953391vw ,2.25rem)
@@ -3397,7 +3443,7 @@ h2 {
     font-size: clamp(1.125rem ,.7083209322rem + 2.0833953391vw ,2rem)
   }
   .card-what--pakachu .card-what__title {
-    width: clamp(10rem ,6.3391767612rem + 18.3041161939vw ,17.6875rem)
+    width: clamp(10rem ,3.720051192rem + 31.39974404vw ,23.1875rem)
   }
   .card-what--bulb .card-what__title {
     width: clamp(10rem ,3.720051192rem + 31.39974404vw ,23.1875rem)
@@ -3604,7 +3650,7 @@ h2 {
     margin-top: clamp(-1.875rem ,-3.8792268076rem + 3.2326890584vw ,.0000000625rem)
   }
   .item-buy__header {
-    font-size: clamp(1.125rem ,.1896941876rem + 1.508588177vw ,2rem)
+    font-size: clamp(.875rem ,-.0603058124rem + 1.508588177vw ,1.75rem)
   }
   .item-buy__numb {
     font-size: clamp(.875rem ,.0733093037rem + 1.2930755803vw ,1.625rem)
@@ -3753,5 +3799,8 @@ h2 {
   .footer__osnovo:hover {
     -webkit-transform: scale(1.03);
     transform: scale(1.03)
+  }
+  .item-buy__text p a:hover {
+    color: #df1818
   }
 }
